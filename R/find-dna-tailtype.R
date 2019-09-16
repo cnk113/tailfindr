@@ -114,16 +114,18 @@ find_dna_tailtype <- function(file_path = NA,
     #ea <- Biostrings::DNAString('GCAATACGTAACTGAACGAAGT')
 
     # define the primer sequences
-    if (dna_datatype == 'cdna') {
-        fp <- Biostrings::DNAString('TTTCTGTTGGTGCTGATATTGCTGCCATTACGGCCGGG')
-        ep <- Biostrings::DNAString('ACTTGCCTGTCGCTCTATCTTC')
-        threshold <- 0.6
-    } else if (dna_datatype == 'pcr-dna') {
-        fp <- Biostrings::DNAString('ATTTAGGTGACACTATAGCGCTCCATGCAAACCTGTC')
-        ep <- Biostrings::DNAString('GAGTCCGGGCGGCGC')
-        threshold <- 0.68
-    }
-
+    #if (dna_datatype == 'cdna') {
+        #fp <- Biostrings::DNAString('TTTCTGTTGGTGCTGATATTGCTGCCATTACGGCCGGG')
+        #ep <- Biostrings::DNAString('ACTTGCCTGTCGCTCTATCTTC')
+        #threshold <- 0.6
+    #} else if (dna_datatype == 'pcr-dna') {
+        #fp <- Biostrings::DNAString('ATTTAGGTGACACTATAGCGCTCCATGCAAACCTGTC')
+        #ep <- Biostrings::DNAString('GAGTCCGGGCGGCGC')
+        #threshold <- 0.68
+    #}
+    fp <- Biostrings::DNAString("CTACACGACGCTCTTCCGATCT")
+    ep <- Biostrings::DNAString("AGATCGGAAGAGC")
+    threshold <- 0.68
     rc_fp <- Biostrings::reverseComplement(fp)
     rc_ep <- Biostrings::reverseComplement(ep)
 
